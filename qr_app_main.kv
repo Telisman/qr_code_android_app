@@ -1,0 +1,38 @@
+<QR_code_Grid>
+    background_color: (256,0,1,1)
+    name:name
+    url:url
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+        color: (256,0,1,1)
+
+        GridLayout:
+            cols:2
+            padding:50
+            spacing:50
+
+            Label:
+                text: "Name of qr_code:"
+                font_size: 32
+
+            TextInput:
+                id:name
+                multiline:False
+                font_size: 32
+
+            Label:
+                text: "URL/link:"
+                font_size: 32
+            TextInput:
+                id:url
+                multiline:False
+                font_size: 32
+
+        Button:
+            text: "Get QR code"
+            size_hint: 0.3, 0.3
+            height: 2
+            font_size: 2
+            on_press: root.press()

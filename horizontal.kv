@@ -1,0 +1,41 @@
+<QR_code_Grid>
+    BoxLayout:
+        orientation:"vertical"
+        size: root.height,root.width
+        Label:
+            text: "Name of qr_code:"
+
+
+        TextInput:
+            id:name
+            multiline:False
+
+
+        Label:
+            text: "URL/link:"
+
+        TextInput:
+            id:url
+            multiline:False
+
+
+        Button:
+            text: "Get QR code"
+            on_press: root.press()
+    orientation:"vertical"
+    Button:
+        text:"a"
+        size:"250dp","60dp"
+        size_hint:None,None
+    Button:
+        text:"b"
+        size_hint: 1,2
+
+
+
+
+    Image:
+        id:qr_image
+        source: 'dsadsadsa.jpg'
+        size: "200dp", "200dp"
+        pos: "100dp", "50dp"
